@@ -1,0 +1,14 @@
+https://www.websequencediagrams.com/
+
+participant Service Provider
+participant User
+participant Identity Provider
+
+User->Service Provider: Request Protected Resource
+note left of Service Provider: Generate SAML request
+Service Provider->+User: Redirect to Identity Provider SSO URL
+User->Identity Provider:
+note right of Identity Provider: Generate SAML response
+Identity Provider->User:Return SAML assertion
+User->-Service Provider:
+Service Provider->User: Return Resource

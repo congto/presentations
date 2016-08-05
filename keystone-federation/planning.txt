@@ -1,0 +1,35 @@
+Proposal:
+
+OpenStack Identity and Federation
+
+Keystone is the central authentication and authorization point for OpenStack.
+Already it handles managing users via LDAP and SQL however as OpenStack and the
+number of possible identity sources grows Keystone is evolving to rely
+primarily on external sources of identity using protocols like SAML.
+Keystone's role then becomes one of pure authorization and mapping those
+identities into an OpenStack context.
+
+For the unfamiliar we'll start with a quick recap of the role of Keystone and
+the permission models of OpenStack, then look at the challenges of handling
+many distinct authentication sources and the in-development changes required
+for federated identity providers.
+
+
+
+Planning:
+
+- Keystone overview
+- What is federation, why do we want it
+- Keystone as a source of identity
+- Keystone as a mapping of identity
+- Authentication vs Authorization
+- SAML workflow
+
+- Flow:
+  - SAML diagrams
+- Components
+  - IdP discovery
+  - Mapping
+
+- Where are we today
+- What's coming up.
